@@ -1,2 +1,5 @@
 # JSEngine
-js.ngn is a subset of the Javascript engine in the following ways: it's a text editor built using the Canvas element, event listeners, and the requestAnimationFrame timing function to name a few.
+js.ngn is a subset of the Javascript engine 
+that provides a suite of applications such as
+a text editor, drawing program, media player 
+and more...
