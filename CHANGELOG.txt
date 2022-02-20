@@ -1,0 +1,187 @@
+********************************
+* * * * * CHANGE LOG * * * * * *
+********************************
+
+[10/07/2021] The ekkoe text editor is updated to support
+             finer control and response of the viewport
+to keybord keys that modify the text on the screen or 
+the functioning of other keys.
+
+* * * * *
+
+[14/07/2021] The geometry tool's plot library is updated 
+             to support the drawing of circular arcs using 
+a syntax similar to that for drawing paths.
+
+* * * * *
+
+[15/07/2021] The geometry tool's plot library sees an update 
+             to the use of the syntax, hence behaviour, of the arc, 
+allowing it to be flexible and respond to different specifications 
+of the grid upon which it is drawn. This allows for elliptical arcs 
+to be derived from circular arcs by setting the units-specifying 
+arguments of the grid to unequal values.
+
+* * * * *
+
+[18/07/2021] The ekkoe text editor's viewport is updated to  
+             display the lines of text from a newly-opened file in 
+             ascending order, with the first line of text from the 
+             opened file appearing at the top of the viewport. The 
+             cursor is placed at the end of the text, i.e. beyond the 
+             viewport when the opened file contains sufficiently many 
+lines of text. A scroll lock bug, which prevented text to be scrolled 
+beyond the line on which the cursor was locked, is also fixed.
+
+The ekkoe text editor's [ArrowLeft] and [ArrowRight] key functions 
+are updated to support the skipping of words when pressed in 
+conjunction with the [CTRL] key.
+
+* * * * *
+
+[22/08/20021] The ekkoe keyboard keys are defined in a single, unified 
+              object, allowing easy reference to each key without the 
+              need for redundant redefinitions. This reference is 
+              defined as part of the standard utility object. The 
+              nullterm and geometry app inherit this update.
+
+* * * * *
+
+[29/08/2021] The ekkoe text editor's specific file save function
+             is updated to correctly delete the line specifying the
+             file to which the text should be saved.
+
+             The geometry app's reserved path keyword is replaced 
+             with the graph keyword. This change is in compliance with 
+             the discrete mathematical structures' definition of a graph.
+
+* * * * *
+
+[11/09/2021] The Interpreter is transplanted from the headless JSEngine 
+             process to the Nullterm process, gaining control to the 
+             activation and deactivation of the Interpreter. As a result, 
+             the headless JSEngine process is fused with Nullterm application, 
+             creating an interactive Nullterm application, and the complexity 
+             of the suite is reduced.
+
+* * * * *
+
+[11/09/2021] The ekkoe text editor's handling of the Scroll Lock, Insert, 
+             and Escape function is updated to respond only after each of 
+             these keys is released.
+             The creation of programs is updated to resemble the creation 
+             of classes in object-oriented programming.
+
+* * * * *
+
+[08/10/2021] The suite is renamed from JSEngine to SAP, an acronym derived  
+             from "Simple Application Programs"; the name of the suite is 
+             soon changed to SAPHE, an acronym for 
+             "Simple Application Programs Hand Evolved" before it is finally 
+             changed to ASH: "Application Structure Homogenized".
+             ASH, much more than SAP or SAPHE, reflects the goals of the suite, 
+             that is, an application, even if complex, should not have 
+             such a foreign structure as to make it difficult for a reader 
+             or developer to understand its working; all application programs 
+             in this suite should have a basic layout in common.
+
+* * * * *
+
+[24/10/2021] The behaviour of the formalized viewport is finalized with 
+             definitions of which keys affect its position and when.
+
+* * * * *
+
+[28/10/2021] A bug is removed from the operation of the F10, K, Arrow Up and 
+             Arrow Down keys.
+             The ekkoe application is renamed to edword for "edit words".
+
+* * * * *
+
+[29/10/2021] A bug is removed from the .history. command of the nullterm application.
+
+* * * * *
+
+[30/10/2021] The ability to change the font, background & foreground colours using 
+             the [F10] key is introduced; the ability to modify the line height 
+             using the [F9] key is introduced as an unstable feature.
+
+* * * * *
+
+[31/10/2021] Nullterm is modified to search for an application only when requested, 
+             i.e., when the [ENTER] key is pressed.
+             This comes with the enables the user to specify a file name 
+             that should be opened by the requested application.
+
+             A bug that rendered images on an incorrectly coloured background 
+             is removed from the geometry application.
+
+* * * * *
+
+[08/11/2021] Edword is renamed to paper, and geometry is renamed to crayon and 
+             the crayon file extension is changed from .ngn to .wax.
+
+             The semantic versioning scheme is adopted, and the ASH suite version 
+             is set to 0.0.0-11.08.21 - an unstable version modified on November 8, 2021.
+
+             The painter process is updated to better handle trnasparent colours.
+
+             The documentation of every applications remains outdated, with 
+             a more refined, object-oriented type of API whose documentation 
+             does not exist outside the source code.
+
+* * * * *
+
+[03/12/2021] A rudimetary ASH Logic class is defined to contain the basic boolean logical
+             operators as well as the two boolean values.
+
+* * * * *
+
+[22/01/2022] The ASH Integer class is updated to support numbers in number systems besides  
+             the decimal number systems. Numbers representions from the binary system to the 
+             hexadecimal system are supported. Numbers can be specified and created in all 
+             these 14 systems and converted to any other system after creation.
+
+* * * * *
+
+[23/01/2022] The ASH Utility class API definition begins.
+
+* * * * *
+
+[06/02/2022] The Integer class is updated to support numbers represented in various bases, 
+             from binary (base 2) up to hexadecimal (base 16). The largest supported value 
+             is the signed 64-bit value consisting of a 0 digit followed by 63 consecutive 
+             1 digits in base 2. The smallest supported value is the signed 64-bit value 
+             consisting of 63 consecutive 1 digits followed by a 0 digit in base 2.
+
+             Positive values have a 0 as the leftmost bit in base 2, and negative values 
+             have a 1 as the right-most bit in base 2.
+
+             The IsLessThan, IsEqualTo, and IsGreaterThan functions are updated and optimized 
+             to share a single internal function that determines the values they each should return.
+
+             The Logic class is used in the Integer class.
+
+* * * * *
+
+[08/02/2022] The UTILS.Link function is masked as ___ and the UTILS.MapKeyValue function
+             is masked as ____. Plans to redesign the Viewport and transfer all Viewport-related 
+             logic from the ASH paper process/application to the ASH viewport process begin.
+
+* * * * *
+
+[20/02/2022] The Integer class is updated to support numbers represented in various bases, 
+             from binary (base 2) up to hexadecimal (base 16). The default range of supported 
+             values is 1 less than 2 raised to the power of 64 (the signed 64-bit value consisting 
+             of a plus sign and 63 consecutive 1 digits in base 2) and its negative.
+
+             Positive values in any base MAY be denoted using a plus sign before the largest 
+             significant (left-most) digit in the number, and negative values SHOULD be 
+             denoted using a minus sign before the most significant digit in the number.
+
+             Functions that may be used to set and retrieve the polarity of an ASH Integer, 
+             as well as functions that may be used to find the maximum and minimum ASH Integer 
+             between 2 given ASH Integers, and the function that may be used to find the greatest 
+             common divisor of 2 given ASH Integers (commonly known as Euclid's division algorithm) 
+             are included in the definition of the ASH Integer. These functions are accessible  
+             to programs through the ASH Integer API.
